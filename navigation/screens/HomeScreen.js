@@ -11,6 +11,7 @@ import Red from "./Red"
 import Green from "./Green"
 import Blue from "./Blue"
 import Yellow from "./Yellow"
+import {Provider } from 'react-native-paper';
 
 
 
@@ -95,6 +96,7 @@ export const Navigators = ({ navigation }) => {
         name="Blue"
         component={Blue}
         options={{
+          headerLeft: null,
           title: "Blue",
           headerTitleAlign: "center",
           headerStyle,
@@ -123,6 +125,7 @@ export const Navigators = ({ navigation }) => {
       component={Yellow}
       IconBar
       options={{
+        headerShown:false,
         title: "Yellow",
         headerTitleAlign: "center",
         headerStyle,
@@ -159,8 +162,9 @@ export const Navigators = ({ navigation }) => {
 
   return (
         
-         
+         <Provider>
               <AuthStackScreen/>
+              </Provider>
           
          
   );

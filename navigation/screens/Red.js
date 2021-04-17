@@ -3,10 +3,12 @@ import { StyleSheet, Text, SafeAreaView, ScrollView, StatusBar, Button, View, To
 import Blue from "./Blue.js"
 import Green from "./Green.js"
 import Yellow from "./Yellow.js"
+import Menu from "./Menu/Menu.js"
 import { createStackNavigator } from '@react-navigation/stack';
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import Icon2 from "react-native-vector-icons/Ionicons";
 import Icon3 from "react-native-vector-icons/Feather";
+
 
 const App = ({navigation}) => {
   // const [visit, setVisit] = useState(false);
@@ -38,12 +40,10 @@ const App = ({navigation}) => {
           <Text style={styles.row}>
           <Icon2 name="trash" color="white" size={30} onPress={() => navigation.navigate('Root', { screen: 'Blue' })}/></Text>
           <Text style={styles.row}>
-          <Icon3 name="more-vertical" color="white" size={30} onPress={() => navigation.navigate('Root', { screen: 'Green' })}/>
+          <Menu />
           </Text>
+         
        </View>
-
-
-
         </TouchableOpacity>
       ),
       title: "HELLO",
