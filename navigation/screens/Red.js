@@ -35,11 +35,11 @@ const App = ({navigation}) => {
           <View style={styles.container2}>
           
           <Text style={styles.row}>
-          <Icon2 name="refresh" color="white" size={30} onPress={() => navigation.navigate('Root', { screen: 'Blue' })}/></Text>
+          <Icon2 name="refresh" color="white" size={25} onPress={() => navigation.navigate('Root', { screen: 'Blue' })}/></Text>
         
           <Text style={styles.row}>
-          <Icon2 name="trash" color="white" size={30} onPress={() => navigation.navigate('Root', { screen: 'Blue' })}/></Text>
-          <Text style={styles.row}>
+          <Icon2 name="trash" color="white" size={25} onPress={() => navigation.navigate('Root', { screen: 'Blue' })}/></Text>
+          <Text style={styles.row1}>
           <Menu />
           </Text>
          
@@ -105,7 +105,13 @@ const styles = StyleSheet.create({
 flex: 1,
 margin: 3,
 
-  }
+  },
+  row1: {
+    flex: 1,
+    margin: 3,
+    marginTop:7,
+    
+      }
 });
 
 export default App;
