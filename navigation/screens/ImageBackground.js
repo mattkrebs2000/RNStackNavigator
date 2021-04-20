@@ -1,9 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import { StyleSheet, Text, SafeAreaView, ScrollView, StatusBar, Button, View, TouchableOpacity} from 'react-native';
+import { StyleSheet, Text, SafeAreaView, ScrollView, StatusBar, Button, View, TouchableOpacity, ImageBackground} from 'react-native';
 import Blue from "./Blue.js"
 import Green from "./Green.js"
 import Yellow from "./Yellow.js"
-import Imagepage from "./ImageBackground";
 import Menu from "./Menu/Menu.js"
 import { createStackNavigator } from '@react-navigation/stack';
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
@@ -14,7 +13,15 @@ import Icon3 from "react-native-vector-icons/Feather";
 const App = ({navigation}) => {
   // const [visit, setVisit] = useState(false);
  
- 
+  const image = {
+    uri:
+      "https://www.html.am/templates/downloads/bryantsmith/nightbeach/images/main.jpg",
+  };
+  const header = {
+    uri:
+      "https://www.html.am/templates/downloads/bryantsmith/nightbeach/images/menu.png",
+  };
+
 
   useEffect(() => {
     navigation.setOptions({
@@ -57,22 +64,20 @@ const App = ({navigation}) => {
 
   return (
     <SafeAreaView style={styles.container}>
+    <ImageBackground source={image} style={styles.image}>
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
     <Text>GoBlue</Text>
     <Button color="white" title="Go to Blue" onPress={() => navigation.navigate("Blue")} />
   </View>
   <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-    <Text>GoBlue</Text>
+    <Text>GoGreen</Text>
     <Button color="white" title="Go to Green" onPress={() => navigation.navigate("Green")} />
   </View>
   <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-  <Text>GoBlue</Text>
+  <Text style={{ color:"white" }}>GoYellow</Text>
   <Button color="white" title="Go to Yellow" onPress={() => navigation.navigate("Yellow")} />
 </View>
-<View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-<Text>GoImageBackground</Text>
-<Button color="white" title="Go to Image" onPress={() => navigation.navigate('Root', { screen: 'Imagepage' })} />
-</View>
+</ImageBackground>
     </SafeAreaView>
   );
 }
@@ -81,7 +86,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: StatusBar.currentHeight,
-    backgroundColor: "red"
+ 
   },
   scrollView: {
     backgroundColor: 'pink',
@@ -116,7 +121,16 @@ margin: 3,
     margin: 3,
     marginTop:7,
     
-      }
+      },
+      image: {
+       
+        marginLeft: 0,
+        marginRight: 5,
+        height: "105%",
+        width: "105%"
+        
+                 
+      },
 });
 
 export default App;

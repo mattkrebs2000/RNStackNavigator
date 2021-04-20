@@ -8,6 +8,7 @@ import Red from "./Red";
 import Green from "./Green";
 import Blue from "./Blue";
 import Yellow from "./Yellow";
+import Imagepage from "./ImageBackground";
 import { Provider } from "react-native-paper";
 
 // import Braingauge from "./Braingauge";
@@ -26,7 +27,22 @@ function Root() {
         name="Blue"
         component={Blue}
         options={{
+          headerLeft: null,
           title: "Blue",
+          headerTitleAlign: "center",
+          headerStyle,
+          headerTintColor: "white",
+          headerTitleStyle: {
+            fontSize: scale(12),
+          },
+        }}
+      />
+      <Stack.Screen
+        name="Imagepage"
+        component={Imagepage}
+        options={{
+
+          title: "Imagepage",
           headerTitleAlign: "center",
           headerStyle,
           headerTintColor: "white",
@@ -100,7 +116,6 @@ export const Navigators = ({ navigation }) => {
         name="Blue"
         component={Blue}
         options={{
-          headerLeft: null,
           title: "Blue",
           headerTitleAlign: "center",
           headerStyle,
