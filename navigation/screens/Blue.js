@@ -10,7 +10,7 @@ const App = ({navigation}) => {
 
   useEffect(() => {
     navigation.setOptions({
-// headerLeft:null,
+      headerLeft: null,
 });
 }, []);
 
