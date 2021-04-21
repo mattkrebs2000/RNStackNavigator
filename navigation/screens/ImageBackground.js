@@ -22,6 +22,12 @@ const App = ({navigation}) => {
       "https://www.html.am/templates/downloads/bryantsmith/nightbeach/images/menu.png",
   };
 
+  const example = {
+    uri:
+      "https://github.com/mattkrebs2000/RNStackNavigator/blob/master/screencapture-127-0-0-1-5500-html-example-html-html-2021-04-20-17_16_45%20(1).png",
+  };
+
+
 
   useEffect(() => {
     navigation.setOptions({
@@ -64,7 +70,7 @@ const App = ({navigation}) => {
 
   return (
     <SafeAreaView style={styles.container}>
-    <ImageBackground source={image} style={styles.image}>
+    <ImageBackground source={example} style={styles.image}>
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
     <Text>GoBlue</Text>
     <Button color="white" title="Go to Blue" onPress={() => navigation.navigate("Blue")} />
@@ -126,8 +132,8 @@ margin: 3,
        
         marginLeft: 0,
         marginRight: 5,
-        height: "105%",
-        width: "105%"
+        height: "85%",
+        width: "80%"
         
                  
       },
